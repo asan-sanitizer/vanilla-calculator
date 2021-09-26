@@ -1,0 +1,99 @@
+* {
+	font-size: 21px;
+    font-family: 'Space Mono';
+    color: purple;
+}
+
+.result-container {
+    margin-top: 90px;
+}
+
+.container {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Take full size */
+    height: 100vh;
+    width: 100%;
+
+    /* Background */
+    background: url('../images/background.jpeg') center center / cover no-repeat;
+}
+
+.input-container {
+    position: relative;
+}
+
+input {
+    padding-left: 12px;
+    height: 60px;
+    width: 13vw;
+}
+button {
+    height: 60px;
+    width: 13vw;
+}
+
+/*
+Show the label at desired position when the 
+placeholder of input isn't shown
+*/
+.container__input:not(:placeholder-shown) + .container__label {
+    background: #EDEDED;
+    transform: translate(0, -110%);
+    opacity: 1;
+}
+
+.container__label {
+    /* Position the label */
+    left: 8px;
+    position: absolute;
+    top: 0;
+
+    /* Hide it by default */
+    opacity: 0;
+    transition: all 200ms;
+}
+:root {
+    --three-dimensions-card-left-side-width: 1rem;
+}
+
+.three-dimensions-card {
+    position: relative;
+}
+
+/* The left side */
+.three-dimensions-card::before { 
+    background: #ddd3ee;
+    content: '';
+    
+    /* Position */
+    top: var(--three-dimensions-card-left-side-width);
+    left: 0px;
+    position: absolute;
+    transform: translate(-100%, 0) skewY(-45deg);
+    transform-origin: left top;
+
+    /* Size */
+    height: 100%;
+    width: var(--three-dimensions-card-left-side-width);
+}
+
+/* The bottom side */
+.three-dimensions-card::after {
+    background:#ddd3ee;
+    content: '';    
+    
+    /* Position */
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    transform: translate(0, 100%) skewX(-45deg);
+    transform-origin: left top;
+
+    /* Size */
+    height: var(--three-dimensions-card-left-side-width);
+    width: 50%;
+}

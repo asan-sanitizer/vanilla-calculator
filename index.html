@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Vanilla Calculator </title>
+	<!-- <link rel="stylesheet" href="./css/simple-grid.min.css"> -->
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+	
+</head>
+<body>
+	<div class="container">
+		<div>
+			<div>
+				<div>
+					<div class="input-container three-dimensions-card">
+						<input id="expression_input"  placeholder="1 + 2 * (sin(30))" class="container__input" />
+						<label class="container__label">Expression</label>
+						<button id="evaluateBtn"> Evaluate </button>
+					</div>
+					<div class="result-container ">
+            <input id="result" type="text" disabled/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="module" src="./js/main.js"></script>
+</body>
+</html>
